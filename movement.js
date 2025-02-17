@@ -17,16 +17,16 @@ const frameRate = 10;
 document.addEventListener("keydown", (e) => {
     if (e.key === "r") {
         setup(); 
-        resetPlayer(); // Reset igralca
-    } else if (!isMoving && ["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"].includes(e.key)) {
+        resetPlayer(); // reset igralca
+    } else if (!isMoving && ["d", "a", "s", "w"].includes(e.key)) {
         movePlayer(e.key);
     }
 });
 
 
 function resetPlayer() {
-    player.x = 0;
-    player.y = 0;
+    player.x = 1;
+    player.y = 1;
     drawMaze();
 }
 
@@ -36,10 +36,10 @@ function movePlayer(key) {
 
     let dx = 0, dy = 0;
 
-    if (key === "ArrowRight") dx = 1;
-    if (key === "ArrowLeft") dx = -1;
-    if (key === "ArrowDown") dy = 1;
-    if (key === "ArrowUp") dy = -1;
+    if (key === "d") dx = 1;
+    if (key === "a") dx = -1;
+    if (key === "s") dy = 1;
+    if (key === "w") dy = -1;
 
     let newX = player.x + dx;
     let newY = player.y + dy;
