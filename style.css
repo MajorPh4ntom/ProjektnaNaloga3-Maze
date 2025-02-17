@@ -40,7 +40,7 @@ canvas {
     background: lime;
     border-radius: 5px;
     margin-top: 50px;
-    margin-left: 20px;
+    margin-left: 33px;
 }
 .resetButton : hover {
 	transition: 0.2s;
