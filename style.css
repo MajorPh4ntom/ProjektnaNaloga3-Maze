@@ -33,7 +33,7 @@ canvas {
 }
 
 .resetButton {
-	font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS', cursive;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
