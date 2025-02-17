@@ -18,7 +18,7 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "r") {
         setup(); 
         resetPlayer(); // reset igralca
-    } else if (!isMoving && ["d", "a", "s", "w"].includes(e.key)) {
+    } else if (!isMoving && ["d", "a", "s", "w"].includes(e.key)) { // ArrowRight, ArrowLeft, ArrowDown, ArrowUp
         movePlayer(e.key);
     }
 });
