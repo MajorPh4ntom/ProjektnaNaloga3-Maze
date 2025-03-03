@@ -19,7 +19,7 @@ Ta projekt je preprosta igra labirinta, kjer igralec vodi kosilnico skozi labiri
 
 - Vključena je favicon ikona.
 
-- SweetAlert: Uporablja se za prikazovanje obvestil, kot so zmaga ali ponovni začetek igre.
+- SweetAlert: Uporablja se za prikazovanje obvestil, kot so zmaga ali gumb vizitka.
 
 - Predvajalnik glasbe: Omogočeno je predvajanje ene izmed petih skladb v ozadju.
 
@@ -33,7 +33,7 @@ Ta projekt je preprosta igra labirinta, kjer igralec vodi kosilnico skozi labiri
 
 4. Če želiš začeti znova, pritisni tipko R ali klikni gumb Resetiraj labirint.
 
-5. Glasbo lahko predvajaš, menjaš med petimi skladbami in zvišaš ter nižaš glasnost.
+5. Glasbo lahko predvajaš ter menjaš med petimi skladbami in zvišaš ter nižaš glasnost.
 
 
 #### Tehnologija:
