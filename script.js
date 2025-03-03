@@ -162,9 +162,8 @@ let isPlaying = false; // se predvaja? (belezi ce se ali ne)
 
 function updateTrack() {
     musicPlayer.src = audioFiles[currentTrack].file;
-    musicPlayer.play(); 
-    songNameDisplay.textContent = audioFiles[currentTrack].name; // ime glasbe
-    isPlaying = true; 
+    songNameDisplay.textContent = audioFiles[currentTrack].name; // posodobi ime pesmi
+    isPlaying = false; // glasba ne začne igrati takoj
     playPauseButton.textContent = "▶️"; 
 }
 
