@@ -60,5 +60,11 @@ Ta projekt je preprosta igra labirinta, kjer igralec vodi kosilnico skozi labiri
 
 ##### Slike:
 
-1. ![image](https://github.com/user-attachments/assets/40ee74fe-688d-4b48-b6c9-c06ecf4649e2)
+![image](https://github.com/user-attachments/assets/fc6c6681-bbdd-4cd2-9041-363aab6500b7)
+
+![image](https://github.com/user-attachments/assets/014614c5-c541-4d9d-bdf4-eb72d93abde0)
+
+![image](https://github.com/user-attachments/assets/dab352c5-f322-47b5-90c5-b636c256024e)
+
+
 
