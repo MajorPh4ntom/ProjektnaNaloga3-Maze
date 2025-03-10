@@ -132,19 +132,19 @@ function smoothMove(targetX, targetY) {
             return;
         }
 
-        // Očisti samo igralčevo prejšnjo pozicijo (brez zidov)
+        // odstrani kosilnica prejšnjo pozicijo
         ctx.clearRect(startX + (cellSize - 20) / 2, startY + (cellSize - 20) / 2, 20, 20);
 
-        // Shrani točko sledi
+        // shrani točko sledi
         trail.push({ x: startX + (cellSize / 2), y: startY + (cellSize / 2) });
 
-        // Nariši sledi kot povezane črte
-        ctx.lineWidth = 13; // Nastavi debelino črte na 20
-        ctx.lineJoin = "round"; // Zaokrožena povezava med črtami
-        ctx.strokeStyle = playerTrailColor; // Nastavi barvo sledi
+        // poveze sledi v crte
+        ctx.lineWidth = 13; // debelino črte na 20
+        ctx.lineJoin = "round"; // okrogla povezava med črtami
+        ctx.strokeStyle = playerTrailColor; // nastavi barvo sledi
         ctx.beginPath();
 
-        // Nariši povezane črte
+        // narise povezane črte
         for (let i = 1; i < trail.length; i++) {
             let p1 = trail[i - 1];
             let p2 = trail[i];
@@ -154,11 +154,11 @@ function smoothMove(targetX, targetY) {
 
         ctx.stroke(); // Nariši vse povezane črte
 
-        // Izračunaj interpolirano pozicijo igralca za gladko gibanje
+        // Izracuna pozicijo igralca za gladko gibanje
         let interpolatedX = startX + (endX - startX) * (step / cellSize);
         let interpolatedY = startY + (endY - startY) * (step / cellSize);
 
-        // Nariši novo pozicijo igralca
+        // narise novo pozicijo igralca
         ctx.drawImage(currentPlayerImg, interpolatedX + (cellSize - 20) / 2, interpolatedY + (cellSize - 20) / 2, 20, 20);
 
         step += moveSpeed;
@@ -168,9 +168,9 @@ function smoothMove(targetX, targetY) {
     animate();
 }
 
-// Funkcija za risanje igralca in sledi
+// risanje igralca in sledi
 function drawPlayer() {
-    // Nariši vse sledi povezane v širšo črto
+    //  vse sledi povezane v širšo črto
     if (trail.length > 1) {
         ctx.beginPath();
         ctx.moveTo(trail[0].x, trail[0].y); // začni na prvi točki sledi
@@ -179,13 +179,13 @@ function drawPlayer() {
             ctx.lineTo(position.x, position.y); // risanje središčnih točk
         });
 
-        ctx.lineWidth = 13; // Nastavi debelino črte na 20
-        ctx.strokeStyle = playerTrailColor; // Nastavimo barvo sledi
-        ctx.lineCap = "round"; // Za zaobljene robove črte
+        ctx.lineWidth = 13; //  debelino črte na 20
+        ctx.strokeStyle = playerTrailColor; //  barvo sledi
+        ctx.lineCap = "round"; // zaobljene robove črte
         ctx.stroke();
     }
 
-    // Nariši trenutni položaj igralca
+    // narise trenutni položaj kosilnice
     ctx.drawImage(
         currentPlayerImg,
         player.x * cellSize + (cellSize - 20) / 2,
@@ -194,14 +194,13 @@ function drawPlayer() {
     );
 }
 
-// Overwrite original drawMaze function to include drawing of the player and trail
 const originalDrawMaze = drawMaze;
 drawMaze = function () {
     originalDrawMaze();
     drawPlayer();
 };
 
-// Resetiranje sledi ob ponovnem začetku igre
+// resetira sledi ob resetu
 document.querySelector(".resetButton").addEventListener("click", () => {
     setup();
     resetPlayer();
